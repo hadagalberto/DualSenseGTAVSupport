@@ -294,13 +294,6 @@ namespace Testing
             r_n_6.Value = r_v_6.Value;
             r_n_7.Value = r_v_7.Value;
             onChangeTrigger = false;
-            /*r_l_1.Text = r_v_1.Value.ToString();
-            r_l_2.Text = r_v_2.Value.ToString();
-            r_l_3.Text = r_v_3.Value.ToString();
-            r_l_4.Text = r_v_4.Value.ToString();
-            r_l_5.Text = r_v_5.Value.ToString();
-            r_l_6.Text = r_v_6.Value.ToString();
-            r_l_7.Text = r_v_7.Value.ToString();*/
 
             if (SelectedDevice().HasValue)
                 Devices.GetDevice(SelectedDevice().Value)

@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DualSenseSupport", "DualSenseSupport\DualSenseSupport.csproj", "{6703B03F-E152-446F-A56E-5C226D169848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSApps", "DSApps\DSApps.csproj", "{269EC777-2D29-4541-B8FE-1D6A46814E98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSApps", "DSApps\DSApps.csproj", "{269EC777-2D29-4541-B8FE-1D6A46814E98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTA5_Support", "GTA5_Support\GTA5_Support.csproj", "{1C7F672C-806F-4515-9E0D-37D78C13080B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{269EC777-2D29-4541-B8FE-1D6A46814E98}.Release|Any CPU.Build.0 = Release|Any CPU
 		{269EC777-2D29-4541-B8FE-1D6A46814E98}.Release|x64.ActiveCfg = Release|Any CPU
 		{269EC777-2D29-4541-B8FE-1D6A46814E98}.Release|x64.Build.0 = Release|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Debug|x64.ActiveCfg = Debug|x64
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Debug|x64.Build.0 = Debug|x64
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Release|x64.ActiveCfg = Release|Any CPU
+		{1C7F672C-806F-4515-9E0D-37D78C13080B}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
