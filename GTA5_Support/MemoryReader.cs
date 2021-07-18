@@ -19,6 +19,11 @@ namespace GTA5_Support
         public static extern bool ReadProcessMemory(int hProcess,
           long lpBaseAddress, byte[] lpBuffer, int dwSize, ref int lpNumberOfBytesRead);
 
+        public static bool GameOpened()
+        {
+            return Process.GetProcessesByName("GTA5").Any();
+        }
+
         public static double GetFireRate()
         {
             Process process = Process.GetProcessesByName("GTA5")[0];

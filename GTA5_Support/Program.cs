@@ -1,6 +1,7 @@
 ﻿using DSProject;
 using DualSenseSupport;
 using System;
+using System.Threading;
 
 namespace GTA5_Support
 {
@@ -13,12 +14,37 @@ namespace GTA5_Support
         static void Main(string[] args)
         {
             Devices.Init();
+            Console.Clear();
+            if (Devices.GetDeviceCount() == 0)
+            {
+                Console.WriteLine("No dualsense controller connected.");
+                Console.ReadKey();
+                Environment.Exit(1);
+            }
+
+            if (!MemoryReader.GameOpened())
+            {
+                Console.WriteLine("The game is not opened.");
+                Console.ReadKey();
+                Environment.Exit(1);
+            }
+
+            Console.WriteLine("Program started, try some weapons");
 
             var selectedDevice = 0;
+            var oldFireRate = MemoryReader.GetFireRate();
 
             while (true)
             {
                 var fireRate = MemoryReader.GetFireRate();
+
+                if(oldFireRate == fireRate)
+                {
+                    Thread.Sleep(100);
+                    continue;
+                }
+
+                oldFireRate = fireRate;
 
                 double forceDouble = (fireRate * 16) / 72;
                 int force = (int)Math.Round(fireRate < 50 ? forceDouble / 3 : forceDouble, 0);
@@ -33,6 +59,7 @@ namespace GTA5_Support
                     Force7 = force,
                     Mode = weaponMode
                 });
+                Thread.Sleep(100);
                 //if (MemoryReader.GetFireRate() == 55)
                 //{
                 //    Devices.GetDevice(selectedDevice).SetTriggerRight(new DsTrigger
