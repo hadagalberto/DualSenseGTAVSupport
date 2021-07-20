@@ -32,19 +32,11 @@ namespace GTA5_Support
             Console.WriteLine("Program started, try some weapons");
 
             var selectedDevice = 0;
-            var oldFireRate = MemoryReader.GetFireRate();
+            
 
             while (true)
             {
                 var fireRate = MemoryReader.GetFireRate();
-
-                if(oldFireRate == fireRate)
-                {
-                    Thread.Sleep(100);
-                    continue;
-                }
-
-                oldFireRate = fireRate;
 
                 double forceDouble = (fireRate * 16) / 72;
                 int force = (int)Math.Round(fireRate < 50 ? forceDouble / 3 : forceDouble, 0);
